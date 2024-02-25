@@ -1,0 +1,1032 @@
+{
+	"info": {
+		"_postman_id": "1d66e24e-087b-461b-9543-c2f3b101a654",
+		"name": "Odata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27271260"
+	},
+	"item": [
+		{
+			"name": "Built-In-Fuction",
+			"item": [
+				{
+					"name": "Contains",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=contains(Name, 'John')",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "contains(Name, 'John')"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endswith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=endswith(Name, 'son')",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "endswith(Name, 'son')"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Startswith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=startswith(Name, 'Emma')",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "startswith(Name, 'Emma')"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Length",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=length(Name) gt 10 and classId eq 1",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "length(Name) gt 10 and classId eq 1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "IndexOF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=indexof(Name, 'A') eq 0",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "indexof(Name, 'A') eq 0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ToLower",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=tolower(Name) eq 'johN smith'",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "tolower(Name) eq 'johN smith'"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ToUpper",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$compute=toupper(Name) as NameUp&select=NameUp, Id, Name, Mark",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$compute",
+									"value": "toupper(Name) as NameUp"
+								},
+								{
+									"key": "select",
+									"value": "NameUp, Id, Name, Mark"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Year",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=year(Dob) eq 2002",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "year(Dob) eq 2002"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Day",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=day(Dob) eq 20",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "day(Dob) eq 20"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Month",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=month(Dob) eq 03",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "month(Dob) eq 03"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Round",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=round(91.3) eq Mark",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "round(91.3) eq Mark"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Floor",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=floor(91.7) eq Mark",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "floor(91.7) eq Mark"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ceiling",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=ceiling(91.3) eq Mark",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "ceiling(91.3) eq Mark"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Querying-data",
+			"item": [
+				{
+					"name": "Select",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$select=Name",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$select",
+									"value": "Name"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark gt 88",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark gt 88"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$orderby=Mark desc",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$orderby",
+									"value": "Mark desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$top=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Skip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$skip=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$skip",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Top/Skip",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$top=5&$skip=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$top",
+									"value": "5"
+								},
+								{
+									"key": "$skip",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Expand",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$expand=Class",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$expand",
+									"value": "Class"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$count=true",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Paging",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$count=true&$filter=Mark gt 90&$top=5&skip=5",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								},
+								{
+									"key": "$filter",
+									"value": "Mark gt 90"
+								},
+								{
+									"key": "$top",
+									"value": "5"
+								},
+								{
+									"key": "skip",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Operators",
+			"item": [
+				{
+					"name": "eq(equal)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$count=true&$filter=Mark eq 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								},
+								{
+									"key": "$filter",
+									"value": "Mark eq 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ne(not equal)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$count=true&$filter=Mark ne 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$count",
+									"value": "true"
+								},
+								{
+									"key": "$filter",
+									"value": "Mark ne 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "gt(greater than)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark gt 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark gt 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ge(greater than or equal to)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark ge 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark ge 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lt(less than)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark lt 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark lt 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "le (less than or equal to)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark le 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark le 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "and",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark eq 90 and Name eq 'Sophia Wilson'",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark eq 90 and Name eq 'Sophia Wilson'"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "or",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=Mark eq 90 or Name eq 'Sophia Wilson'",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "Mark eq 90 or Name eq 'Sophia Wilson'"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=(Mark add 10) gt 90",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "(Mark add 10) gt 90"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sub",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=(Mark sub 10) eq 80",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "(Mark sub 10) eq 80"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mult",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=(Mark mul 10) eq 900",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "(Mark mul 10) eq 900"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "div",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=(Mark div 10) eq 9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "(Mark div 10) eq 9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mod",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$filter=(Mark mod 10) eq 9",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$filter",
+									"value": "(Mark mod 10) eq 9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "compute",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/odata/Students?$compute=year(dob) as YearOfBirth&$select=Id, Name, Mark, YearOfBirth",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"odata",
+								"Students"
+							],
+							"query": [
+								{
+									"key": "$compute",
+									"value": "year(dob) as YearOfBirth"
+								},
+								{
+									"key": "$select",
+									"value": "Id, Name, Mark, YearOfBirth"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/odata/Students",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"odata",
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 2333\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/odata/Students/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"odata",
+						"Students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ClassId\": \"1\",\r\n    \"Name\": \"Nguyen Khanh Huyen\",\r\n    \"Age\": 20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseUrl}}/odata/Students",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"odata",
+						"Students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/odata/Students/1",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"odata",
+						"Students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseUrl}}/odata/Students/51",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"odata",
+						"Students",
+						"51"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

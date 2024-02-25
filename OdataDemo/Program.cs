@@ -11,6 +11,7 @@ namespace OdataDemo
         {
             var modelBuilder = new ODataConventionModelBuilder();
             modelBuilder.EntitySet<Student>("Students");
+            modelBuilder.EntitySet<Class>("Classes");
 
             var builder = WebApplication.CreateBuilder(args);
 
