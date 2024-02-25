@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace OdataDemo.Models;
+namespace OdataDemo.Entities;
 
 public partial class OdataContext : DbContext
 {
@@ -20,19 +20,14 @@ public partial class OdataContext : DbContext
     public virtual DbSet<Student> Students { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        if (!optionsBuilder.IsConfigured)
-        {
-            var connectionString = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build().GetConnectionString("DefaultConnection");
-            optionsBuilder.UseSqlServer(connectionString);
-        }
-    }
+#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+        => optionsBuilder.UseSqlServer("Data Source=LAPTOP-LQOFJPF7\\SQLEXPRESS;Initial Catalog=Odata; User ID=sa;Password=12345;Encrypt=false;TrustServerCertificate=true");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Class>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Class__3214EC0779D98A05");
+            entity.HasKey(e => e.Id).HasName("PK__Class__3214EC07A3ADE061");
 
             entity.ToTable("Class");
 
@@ -43,10 +38,11 @@ public partial class OdataContext : DbContext
 
         modelBuilder.Entity<Student>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__Student__3214EC0751F5C5F7");
+            entity.HasKey(e => e.Id).HasName("PK__Student__3214EC07CE664974");
 
             entity.ToTable("Student");
 
+            entity.Property(e => e.Dob).HasColumnType("date");
             entity.Property(e => e.Name)
                 .HasMaxLength(100)
                 .IsUnicode(false);

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OdataDemo.Models;
+namespace OdataDemo.Entities;
 
 public partial class Class
 {

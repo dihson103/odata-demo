@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.OData.Formatter;
 using Microsoft.AspNetCore.OData.Query;
 using Microsoft.AspNetCore.OData.Routing.Controllers;
 using Microsoft.EntityFrameworkCore;
-using OdataDemo.Models;
+using OdataDemo.Entities;
 
 namespace OdataDemo.Controllers
 {

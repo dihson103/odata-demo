@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OData.ModelBuilder;
-using OdataDemo.Models;
+using OdataDemo.Entities;
 
 namespace OdataDemo
 {
@@ -14,7 +14,7 @@ namespace OdataDemo
 
             var builder = WebApplication.CreateBuilder(args);
 
-            builder.Services.AddControllers().AddOData(options => 
+            builder.Services.AddControllers().AddOData(options =>
             options.EnableQueryFeatures().AddRouteComponents("odata", modelBuilder.GetEdmModel()));
 
             builder.Services.AddEndpointsApiExplorer();

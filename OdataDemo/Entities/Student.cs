@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace OdataDemo.Models;
+namespace OdataDemo.Entities;
 
 public partial class Student
 {
@@ -11,7 +11,9 @@ public partial class Student
 
     public string? Name { get; set; }
 
-    public int? Age { get; set; }
+    public int? Mark { get; set; }
+
+    public DateTime? Dob { get; set; }
 
     public virtual Class? Class { get; set; }
 }
